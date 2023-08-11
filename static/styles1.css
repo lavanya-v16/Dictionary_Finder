@@ -1,10 +1,12 @@
 /* styles.css */
 
+
+
 /* Overall styling */
 body {
-    background-color: white;
+    background-color: #0d1d31;
     /* background-color: #57C5B6;  */
-    color: black;
+    color: white;
     /* color: #820000;    */
     /* color: #1A5F7A;   meanings*/
     font-family: Arial, sans-serif;
@@ -39,7 +41,7 @@ audio {
 /* Part of speech section */
 h2 {
     /* color: #1500ff;  */
-    color: black;
+    color: white;
     font-size: 24px;
     margin-top: 20px;
     font-style: bold;
@@ -63,9 +65,9 @@ form {
     padding: 100px;
     /* background-color: #f4f4f4; */
     background-color: rgb(0, 183, 255);
-    border: 15px solid black;
+    border: 15px solid white;
     /* width: 400px; */
-    width: 20%;
+    width: 30%;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -75,7 +77,7 @@ form {
 }
 
 input[type="text"] {
-    width: 85%;  /*100% */                         /* box width*/
+    width: 100%;  /*100% */                         /* box width*/
     padding: 0.5rem 0.75rem;
     /* padding: 10px; */
     border: 1px solid #ccc;
@@ -114,25 +116,291 @@ input[type="submit"]:hover {
 
 /* Custom button style */
 /* click here to go back button */
-.custom-button {
-    background-color: black; /* Custom background color */
-    color: white; /* Custom text color */
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 20%;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 10;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-.custom-button:hover {
-    background-color: #0056b3; /* Custom background color on hover */
+.container_abc {
+  /* background-color: black; */
+  width: 50%;
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  /* background: #070707; */
+  margin: auto;
+}
+
+.button {
+  position: relative;
+  left: 100px;
+  right: 0px;
+  padding: 16px 30px;
+  font-size: 1.5rem;
+  color: var(--color);
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  text-shadow: 0 0 15px var(--color);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.button:hover {
+  color: #fff;
+  border: 2px solid rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0px var(--color);
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color);
+  z-index: -1;
+  transform: scale(0);
+  transition: 0.5s;
+}
+
+.button:hover::before {
+  transform: scale(1);
+  transition-delay: 0.5s;
+  box-shadow: 0 0 10px var(--color),
+    0 0 30px var(--color),
+    0 0 60px var(--color);
+}
+
+.button span {
+  position: absolute;
+  background: var(--color);
+  pointer-events: none;
+  border-radius: 2px;
+  box-shadow: 0 0 10px var(--color),
+    0 0 20px var(--color),
+    0 0 30px var(--color),
+    0 0 50px var(--color),
+    0 0 100px var(--color);
+  transition: 0.5s ease-in-out;
+  transition-delay: 0.25s;
+}
+
+.button:hover span {
+  opacity: 0;
+  transition-delay: 0s;
+}
+
+.button span:nth-child(1),
+.button span:nth-child(3) {
+  width: 40px;
+  height: 4px;
+}
+
+.button:hover span:nth-child(1),
+.button:hover span:nth-child(3) {
+  transform: translateX(0);
+}
+
+.button span:nth-child(2),
+.button span:nth-child(4) {
+  width: 4px;
+  height: 40px;
+}
+
+.button:hover span:nth-child(1),
+.button:hover span:nth-child(3) {
+  transform: translateY(0);
+}
+
+.button span:nth-child(1) {
+  top: calc(50% - 2px);
+  left: -50px;
+  transform-origin: left;
+}
+
+.button:hover span:nth-child(1) {
+  left: 50%;
+}
+
+.button span:nth-child(3) {
+  top: calc(50% - 2px);
+  right: -50px;
+  transform-origin: right;
+}
+
+.button:hover span:nth-child(3) {
+  right: 50%;
+}
+
+.button span:nth-child(2) {
+  left: calc(50% - 2px);
+  top: -50px;
+  transform-origin: top;
+}
+
+.button:hover span:nth-child(2) {
+  top: 50%;
+}
+
+.button span:nth-child(4) {
+  left: calc(50% - 2px);
+  bottom: -50px;
+  transform-origin: bottom;
+}
+
+.button:hover span:nth-child(4 ) {
+  bottom: 50%;
 }
 
 
+.heading {
+  /* background-color: black; */
+  width: 50%;
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  /* background: #070707; */
+  margin: auto;
+}
 
+.headingbutton {
+  position: relative;
+  left: 100px;
+  right: 0px;
+  padding: 16px 30px;
+  font-size: 1.5rem;
+  color: var(--color);
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  text-shadow: 0 0 15px var(--color);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.headingbutton:hover {
+  color: #fff;
+  border: 2px solid rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0px var(--color);
+}
+
+.headingbutton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color);
+  z-index: -1;
+  transform: scale(0);
+  transition: 0.5s;
+}
+
+.headingbutton:hover::before {
+  transform: scale(1);
+  transition-delay: 0.5s;
+  box-shadow: 0 0 10px var(--color),
+    0 0 30px var(--color),
+    0 0 60px var(--color);
+}
+
+.headingbutton span {
+  position: absolute;
+  background: var(--color);
+  pointer-events: none;
+  border-radius: 2px;
+  box-shadow: 0 0 10px var(--color),
+    0 0 20px var(--color),
+    0 0 30px var(--color),
+    0 0 50px var(--color),
+    0 0 100px var(--color);
+  transition: 0.5s ease-in-out;
+  transition-delay: 0.25s;
+}
+
+.headingbutton:hover span {
+  opacity: 0;
+  transition-delay: 0s;
+}
+
+.headingbutton span:nth-child(1),
+.headingbutton span:nth-child(3) {
+  width: 40px;
+  height: 4px;
+}
+
+.headingbutton:hover span:nth-child(1),
+.button:hover span:nth-child(3) {
+  transform: translateX(0);
+}
+
+.headingbutton span:nth-child(2),
+.headingbutton span:nth-child(4) {
+  width: 4px;
+  height: 40px;
+}
+
+.headingbutton:hover span:nth-child(1),
+.headingbutton:hover span:nth-child(3) {
+  transform: translateY(0);
+}
+
+.headingbutton span:nth-child(1) {
+  top: calc(50% - 2px);
+  left: -50px;
+  transform-origin: left;
+}
+
+.headingbutton:hover span:nth-child(1) {
+  left: 50%;
+}
+
+.headingbutton span:nth-child(3) {
+  top: calc(50% - 2px);
+  right: -50px;
+  transform-origin: right;
+}
+
+.headingbutton:hover span:nth-child(3) {
+  right: 50%;
+}
+
+.headingbutton span:nth-child(2) {
+  left: calc(50% - 2px);
+  top: -50px;
+  transform-origin: top;
+}
+
+.headingbutton:hover span:nth-child(2) {
+  top: 50%;
+}
+
+.headingbutton span:nth-child(4) {
+  left: calc(50% - 2px);
+  bottom: -50px;
+  transform-origin: bottom;
+}
+
+.headingbutton:hover span:nth-child(4 ) {
+  bottom: 50%;
+}
 

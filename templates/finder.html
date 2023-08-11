@@ -23,8 +23,11 @@
 
     </head>
     <body>
+        <!-- <div class="container"></div> -->
+        <div class="heading">
+        <h1 class="btn headingbutton" style="--color:#1e9bff;"><u>The word provided is: {{word_to_send}}</u></h1>
+        </div>
         <div class="container"></div>
-        <h1 >The word provided is: {{word_to_send}}</h1>
         <h2 >The audio pronounciationof the word: </h2>
         <audio controls>
             <source src="{{audio}}" type="audio/mpeg">
@@ -41,6 +44,8 @@
        
         {% endfor %}
     </div>
+    <br>
+    <br>
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -49,7 +54,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" 
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
-    <a href="{{ url_for('home') }}" class="btn custom-button">Go back to enter another word</a>
+    <!-- <a href="{{ url_for('home') }}" class="btn custom-button">Go back to enter another word</a> -->
+    <div class="container_abc">
+        <a href="{{ url_for('home') }}" class="btn button" href="#" style="--color:#1e9bff;">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Go back to enter another word
+        </a>
+      </div>
     
 </html>
 
