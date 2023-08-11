@@ -1,0 +1,138 @@
+/* styles.css */
+
+/* Overall styling */
+body {
+    background-color: white;
+    /* background-color: #57C5B6;  */
+    color: black;
+    /* color: #820000;    */
+    /* color: #1A5F7A;   meanings*/
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: large;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+
+/* Heading styles */
+h1, h2 {
+    /* color: #333; */
+    /* color:  #EA1179;  */
+    color: #0081B4;
+    color:  #146C94;     /* welcome to word finder */
+    text-align: center;
+}
+
+/* Audio player */
+audio {
+    display: block;
+    margin: 10px 0;
+}
+
+/* Part of speech section */
+h2 {
+    /* color: #1500ff;  */
+    color: black;
+    font-size: 24px;
+    margin-top: 20px;
+    font-style: bold;
+    font-weight: bolder;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* Form styling */
+
+form {
+    margin: auto;
+    margin-top: 20px;
+    padding: 100px;
+    /* background-color: #f4f4f4; */
+    background-color: rgb(0, 183, 255);
+    border: 15px solid black;
+    /* width: 400px; */
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 30vh;                                  /* box height*/
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+input[type="text"] {
+    width: 85%;  /*100% */                         /* box width*/
+    padding: 0.5rem 0.75rem;
+    /* padding: 10px; */
+    border: 1px solid #ccc;
+    border-radius: 250px;
+    box-sizing: border-box;
+    border-color: black;
+}
+
+/* submit button- click here */
+input[type="submit"] {
+    /* background-color: #007bff; */
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Styles for centering the image */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh; /* Set the height of the container */
+}
+
+.center-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Custom button style */
+/* click here to go back button */
+.custom-button {
+    background-color: black; /* Custom background color */
+    color: white; /* Custom text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+}
+
+.custom-button:hover {
+    background-color: #0056b3; /* Custom background color on hover */
+}
+
+
+
+
