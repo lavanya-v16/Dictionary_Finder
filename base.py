@@ -9,6 +9,7 @@ app.template_folder = 'templates'
 def home():
     if request.method=="POST":
         a=request.form["word"]
+        print("hello")
         return redirect(url_for("finder", word=a))
     else:
         return render_template("word.html")
